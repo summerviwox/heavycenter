@@ -3,6 +3,15 @@
     xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.siweisoft.heavycenter">
     <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".app.ZXApp"
         android:theme="@style/AppBaseTheme"
@@ -34,6 +43,14 @@
                 <category android:name="您应用的包名" />
             </intent-filter>
         </receiver>
+
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="fLz5tIaRyyTiHFdWtdWd5PoDoCLP9opD" >
+        </meta-data>
+
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote"> </service>
 
         <activity
             android:name=".module.welcome.welcome.WelcomeCT" android:screenOrientation="portrait">

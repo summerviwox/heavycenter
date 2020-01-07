@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        summer {
+            storeFile file('E:\\project\\android\\heavycenter\\app\\key\\summer.jks')
+            storePassword 'summer'
+            keyPassword 'summer'
+            keyAlias = 'summer'
+        }
+    }
     compileSdkVersion 28
     buildToolsVersion = '28.0.3'
     defaultConfig {
@@ -61,9 +69,8 @@ android {
                     'src/main/res/store',
 
             ]
-            jniLibs.srcDirs = [
-                    'libDir',
-            ]
+            jniLibs.srcDir 'libs'
+            jni.srcDirs = []
         }
     }
     dataBinding {
@@ -89,7 +96,7 @@ android {
 }
 
 dependencies {
-    api fileTree(dir: 'libs', include: ['*.jar'])
+    api fileTree(include: ['*.jar'], dir: 'libs')
     api 'com.github.summerviwox:X:1.1.0.15'
     api 'com.jakewharton:butterknife:10.0.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
@@ -99,4 +106,5 @@ dependencies {
     implementation 'com.tubb.smrv:swipemenu-recyclerview:5.4.8'
     implementation 'com.lzy.widget:imagepicker:0.6.1'
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+    implementation files('lib/BaiduLBS_Android.jar')
 }
