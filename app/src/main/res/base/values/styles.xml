@@ -47,6 +47,11 @@
         <attr name="txt_maxlenth" format="integer"/>
         <attr name="inputType" format="integer"/>
         <attr name="txt_hint" format="string"/>
+        <attr name="srlEnableAutoLoadmore" format="boolean"/>
+        <attr name="srlEnableLoadmoreWhenContentNotFull" format="boolean"/>
+        <attr name="srlEnableLoadmore" format="boolean"/>
+
+
     </declare-styleable>
 
 

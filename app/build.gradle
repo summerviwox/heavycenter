@@ -48,6 +48,17 @@ android {
                     'src/main/res/view',
                     'src/main/res/menu',
                     'src/main/res/myce',
+                    'src/main/res/mana/mana',
+                    'src/main/res/mana/car',
+                    'src/main/res/mana/good',
+                    'src/main/res/mana/store',
+                    'src/main/res/mana/user',
+                    'src/main/res/weight',
+                    'src/main/res/map',
+                    'src/main/res/trans',
+                    'src/main/res/order',
+                    'src/main/res/msg',
+                    'src/main/res/store',
 
             ]
             jniLibs.srcDirs = [
@@ -85,4 +96,7 @@ dependencies {
     api 'androidx.drawerlayout:drawerlayout:1.1.0-alpha03'
     api 'cn.jiguang.sdk:jpush:3.5.4'
     api 'cn.jiguang.sdk:jcore:2.2.4'
+    implementation 'com.tubb.smrv:swipemenu-recyclerview:5.4.8'
+    implementation 'com.lzy.widget:imagepicker:0.6.1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
 }

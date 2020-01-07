@@ -60,6 +60,7 @@ public class LoginCT extends XFragment<LoginUI,LoginDE,LoginVA> {
                         @Override
                         public void onError(int code, String error) {
                             LogUtils.e(error);
+                            startActivity(new Intent(LoginCT.this.getAct(), MainCT.class));
                         }
                     });
                 }

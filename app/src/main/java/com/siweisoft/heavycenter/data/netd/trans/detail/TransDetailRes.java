@@ -3,12 +3,10 @@ package com.siweisoft.heavycenter.data.netd.trans.detail;
 
 import android.text.TextUtils;
 
-import androidx.databinding.Bindable;
-
 import com.blankj.utilcode.util.GsonUtils;
 import com.blankj.utilcode.util.SPUtils;
 import com.blankj.utilcode.util.TimeUtils;
-import com.siweisoft.heavycenter.module.order.rule.RuleVA;
+import com.siweisoft.heavycenter.module.main.order.rule.RuleVA;
 import com.siweisoft.heavycenter.util.DateFormatUtil;
 import com.summer.x.base.ui.VA;
 import com.siweisoft.heavycenter.data.locd.LocalValue;
@@ -17,11 +15,8 @@ import com.summer.x.util.StringUtil;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.text.DecimalFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public  class TransDetailRes extends VA {
 

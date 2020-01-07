@@ -38,6 +38,11 @@ public class LocalValue extends VA {
     }
 
     public  static LoginResBean getLoginRes(){
+        LoginResBean loginResBean = new LoginResBean();
+        loginResBean.setWareHouseCount(1);
+        loginResBean.setAbbreviationName("setAbbreviationName");
+        loginResBean.setUserType(1);
+        loginResBean.setUserRole("driver");
         return GsonUtils.fromJson(SPUtils.getInstance().getString(LOGIN_RES),LoginResBean.class);
     }
 
