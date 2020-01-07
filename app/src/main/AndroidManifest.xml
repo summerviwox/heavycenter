@@ -4,8 +4,9 @@
     package="com.siweisoft.heavycenter">
     <dist:module dist:instant="true" />
     <application
-        android:theme="@style/AppTheme"
-        tools:replace="android:label,android:icon"
+        android:name=".app.ZXApp"
+        android:theme="@style/AppBaseTheme"
+        tools:replace="android:label,android:icon,android:name"
         android:persistent="true"
         android:hardwareAccelerated="true"
         android:largeHeap="true"
@@ -45,6 +46,10 @@
 
         <activity
             android:name=".module.account.account.AccountCT"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".module.main.main.MainCT"
             android:screenOrientation="portrait" />
     </application>
 </manifest>

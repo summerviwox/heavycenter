@@ -40,4 +40,12 @@ public class LocalValue extends VA {
     public  static LoginResBean getLoginRes(){
         return GsonUtils.fromJson(SPUtils.getInstance().getString(LOGIN_RES),LoginResBean.class);
     }
+
+    public static  boolean is绑定了单位() {
+        //绑定了单位== true
+        if(LocalValue.getLoginRes().getBindCompanyState()== LoginResBean.BIND_UNIT_STATE_BINDED){
+            return true;
+        }
+        return false;
+    }
 }

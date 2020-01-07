@@ -28,8 +28,12 @@ android {
     }
     buildTypes {
         release {
+            //buildConfigField 'boolean', 'DEBUG', 'true'
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            //buildConfigField 'boolean', 'DEBUG', 'true'
         }
     }
 
@@ -42,6 +46,9 @@ android {
                     'src/main/res/account',
                     'src/main/res/main',
                     'src/main/res/view',
+                    'src/main/res/menu',
+                    'src/main/res/myce',
+
             ]
             jniLibs.srcDirs = [
                     'libDir',
@@ -72,7 +79,7 @@ android {
 
 dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
-    api 'com.github.summerviwox:X:1.1.0.14'
+    api 'com.github.summerviwox:X:1.1.0.15'
     api 'com.jakewharton:butterknife:10.0.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
     api 'androidx.drawerlayout:drawerlayout:1.1.0-alpha03'

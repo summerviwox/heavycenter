@@ -4,6 +4,8 @@ package com.siweisoft.heavycenter.data.netd.acct.login;
 
 import com.summer.x.base.ui.VA;
 
+import java.util.HashMap;
+
 public class LoginReqBean extends VA {
 
     private int identityType;
@@ -19,6 +21,20 @@ public class LoginReqBean extends VA {
     private int deviceType;
 
     private String inputPwd;
+
+
+    public HashMap<String, String> getMap() {
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put("identityType",identityType+"");
+        hashMap.put("identifier",identifier+"");
+        hashMap.put("tel",tel);
+        hashMap.put("passWord",passWord);
+        hashMap.put("deviceId",deviceId);
+        hashMap.put("deviceType",deviceType+"");
+        hashMap.put("inputPwd",inputPwd);
+        return hashMap;
+    }
+
 
     public LoginReqBean() {
     }

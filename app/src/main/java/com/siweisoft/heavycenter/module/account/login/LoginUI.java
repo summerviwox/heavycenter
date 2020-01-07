@@ -11,6 +11,7 @@ import com.siweisoft.heavycenter.data.locd.LocalValue;
 import com.siweisoft.heavycenter.data.netd.acct.login.LoginReqBean;
 import com.siweisoft.heavycenter.data.netd.acct.login.LoginResBean;
 import com.siweisoft.heavycenter.databinding.FragAcctLoginBinding;
+import com.siweisoft.heavycenter.util.MD5Util;
 import com.summer.x.base.ui.UI;
 
 import cn.jpush.android.api.JPushInterface;
@@ -19,6 +20,8 @@ public class LoginUI extends UI <FragAcctLoginBinding>{
 
 
     public void initUI() {
+        getUI().phone.getEditText().setText("15000000001");
+        getUI().pwd.getEditText().setText("111111");
         if(!TextUtils.isEmpty(SPUtils.getInstance().getString(LocalValue.LOGIN_REQ))){
             LoginReqBean loginReqBean = GsonUtils.fromJson(SPUtils.getInstance().getString(LocalValue.LOGIN_REQ),LoginReqBean.class);
             getUI().phone.getEditText().setText(loginReqBean.getTel());
@@ -43,10 +46,11 @@ public class LoginUI extends UI <FragAcctLoginBinding>{
         LoginReqBean loginReqBean = new LoginReqBean();
         loginReqBean.setIdentityType(1);
         loginReqBean.setTel(getUI().phone.getText().toString());
-        loginReqBean.setPassWord(EncryptUtils.encryptMD5ToString(getUI().pwd.getText().toString()));
+        loginReqBean.setPassWord(MD5Util.md5(getUI().pwd.getText().toString()));
         loginReqBean.setInputPwd(getUI().pwd.getText().toString());
         loginReqBean.setDeviceId(JPushInterface.getRegistrationID(getContext()));
         loginReqBean.setDeviceType(1);
         return loginReqBean;
     }
+
 }

@@ -1,4 +1,6 @@
 package com.siweisoft.heavycenter.module.account.agree;
 
-public class AgreeCT {
+import com.summer.x.base.ui.XFragment;
+
+public class AgreeCT extends XFragment<AgreeUI,AgreeDE,AgreeVA> {
 }
